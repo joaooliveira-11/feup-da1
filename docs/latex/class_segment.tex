@@ -1,0 +1,147 @@
+\hypertarget{class_segment}{}\doxysection{Segment Class Reference}
+\label{class_segment}\index{Segment@{Segment}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_segment_a9c95c3ce16c7f8bdd353e2f98b0309a4}{Segment}} (string \+\_\+stationA, string \+\_\+stationB, int \+\_\+capacity, string \+\_\+service)
+\begin{DoxyCompactList}\small\item\em Constructor of new \mbox{\hyperlink{class_segment}{Segment}} given it\textquotesingle{}s departure station name, arrival station name, capacity and service. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_segment_a43d29276f5718a1c73612b9d672c4618}{get\+StationA}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the Segment´s departure station name. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_segment_a175a6dd0d8215ef2427c737f34bdcbb9}{get\+StationB}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the Segment´s arrival station name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_segment_a761bab92a0cd20cd481af7f63c061de1}{get\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the Segment´s capacity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_segment_ad1421e30939f297de09a39d42dc73187}{get\+Flow}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the Segment´s flow. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_segment_a72a3c36152bd57d85a560d081bdb1ffd}{set\+Flow}} (int f)
+\begin{DoxyCompactList}\small\item\em Setter for the Segment´s flow attribute. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_segment_a71fc12a046940f606824380c19cb4486}{get\+Service}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the Segment´s service. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_segment_a805b866ec59937c53189ee341cb96c20}{get\+Cost}} ()
+\begin{DoxyCompactList}\small\item\em Gets the segment service cost multiplied by the current flow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_segment_a9c95c3ce16c7f8bdd353e2f98b0309a4}\label{class_segment_a9c95c3ce16c7f8bdd353e2f98b0309a4}} 
+\index{Segment@{Segment}!Segment@{Segment}}
+\index{Segment@{Segment}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{Segment()}{Segment()}}
+{\footnotesize\ttfamily Segment\+::\+Segment (\begin{DoxyParamCaption}\item[{string}]{\+\_\+stationA,  }\item[{string}]{\+\_\+stationB,  }\item[{int}]{\+\_\+capacity,  }\item[{string}]{\+\_\+service }\end{DoxyParamCaption})}
+
+
+
+Constructor of new \mbox{\hyperlink{class_segment}{Segment}} given it\textquotesingle{}s departure station name, arrival station name, capacity and service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+stationA} & \\
+\hline
+{\em \+\_\+stationB} & \\
+\hline
+{\em \+\_\+capacity} & \\
+\hline
+{\em \+\_\+service} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_segment_a761bab92a0cd20cd481af7f63c061de1}\label{class_segment_a761bab92a0cd20cd481af7f63c061de1}} 
+\index{Segment@{Segment}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily int Segment\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the Segment´s capacity. 
+
+\begin{DoxyReturn}{Returns}
+A Segment´s capacity. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_segment_a805b866ec59937c53189ee341cb96c20}\label{class_segment_a805b866ec59937c53189ee341cb96c20}} 
+\index{Segment@{Segment}!getCost@{getCost}}
+\index{getCost@{getCost}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Segment\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the segment service cost multiplied by the current flow. 
+
+\begin{DoxyReturn}{Returns}
+the segment service cost multiplied by the current flow 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_segment_ad1421e30939f297de09a39d42dc73187}\label{class_segment_ad1421e30939f297de09a39d42dc73187}} 
+\index{Segment@{Segment}!getFlow@{getFlow}}
+\index{getFlow@{getFlow}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{getFlow()}{getFlow()}}
+{\footnotesize\ttfamily int Segment\+::get\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the Segment´s flow. 
+
+\begin{DoxyReturn}{Returns}
+A Segment´s flow. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_segment_a71fc12a046940f606824380c19cb4486}\label{class_segment_a71fc12a046940f606824380c19cb4486}} 
+\index{Segment@{Segment}!getService@{getService}}
+\index{getService@{getService}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{getService()}{getService()}}
+{\footnotesize\ttfamily string Segment\+::get\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the Segment´s service. 
+
+\begin{DoxyReturn}{Returns}
+A Segment´s service. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_segment_a43d29276f5718a1c73612b9d672c4618}\label{class_segment_a43d29276f5718a1c73612b9d672c4618}} 
+\index{Segment@{Segment}!getStationA@{getStationA}}
+\index{getStationA@{getStationA}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{getStationA()}{getStationA()}}
+{\footnotesize\ttfamily string Segment\+::get\+StationA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the Segment´s departure station name. 
+
+\begin{DoxyReturn}{Returns}
+A Station´s departure station name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_segment_a175a6dd0d8215ef2427c737f34bdcbb9}\label{class_segment_a175a6dd0d8215ef2427c737f34bdcbb9}} 
+\index{Segment@{Segment}!getStationB@{getStationB}}
+\index{getStationB@{getStationB}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{getStationB()}{getStationB()}}
+{\footnotesize\ttfamily string Segment\+::get\+StationB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the Segment´s arrival station name. 
+
+\begin{DoxyReturn}{Returns}
+A Station´s arrival station name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_segment_a72a3c36152bd57d85a560d081bdb1ffd}\label{class_segment_a72a3c36152bd57d85a560d081bdb1ffd}} 
+\index{Segment@{Segment}!setFlow@{setFlow}}
+\index{setFlow@{setFlow}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{setFlow()}{setFlow()}}
+{\footnotesize\ttfamily void Segment\+::set\+Flow (\begin{DoxyParamCaption}\item[{int}]{f }\end{DoxyParamCaption})}
+
+
+
+Setter for the Segment´s flow attribute. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Ines\+O/\+Desktop/\+DA\+\_\+proj1/\+Classes/Segment.\+h\item 
+C\+:/\+Users/\+Ines\+O/\+Desktop/\+DA\+\_\+proj1/\+Classes/Segment.\+cpp\end{DoxyCompactItemize}

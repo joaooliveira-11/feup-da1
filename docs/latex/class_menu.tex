@@ -1,0 +1,195 @@
+\hypertarget{class_menu}{}\doxysection{Menu Class Reference}
+\label{class_menu}\index{Menu@{Menu}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_menu_ad8572ff8d66ae357cbfa15112375dc07}\label{class_menu_ad8572ff8d66ae357cbfa15112375dc07}} 
+static void {\bfseries readmenu} ()
+\begin{DoxyCompactList}\small\item\em Runs the interactive user menu. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_menu_ab9ef3a6657abc99c9975385aa4382221}{Simultaneously\+Max\+Trains}} (string departurestation\+\_\+, string arrivalstation\+\_\+)
+\begin{DoxyCompactList}\small\item\em Prints the maximum number of trains that can simultaneously travel between 2 stations. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_menu_a803e24de9b2d50d546e5a0954606f904}{Networks\+Simultaneously\+Max\+Trains}} ()
+\begin{DoxyCompactList}\small\item\em Prints, from all pairs of staions, the ones that require the most amount of trains when taking full advantage of the network capacity. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_menu_a92b31f2e3821ceacb95fb66ac55660b7}{top\+K\+\_\+municipalities\+\_\+districts}} (int k)
+\begin{DoxyCompactList}\small\item\em Prints the top-\/k municipalities and districts with the most transportation needs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_ab85e3286525122c07eb70faa0940fb57}\label{class_menu_ab85e3286525122c07eb70faa0940fb57}} 
+static void {\bfseries top\+K\+\_\+municipalities\+\_\+districtsv2} (int k)
+\item 
+\mbox{\Hypertarget{class_menu_a3fc4c0d927414a2620fa786b102495c0}\label{class_menu_a3fc4c0d927414a2620fa786b102495c0}} 
+static void {\bfseries top\+K\+\_\+municipalities\+\_\+districtsv3} (int k)
+\item 
+static void \mbox{\hyperlink{class_menu_a5002b7246c9c75a38d2b4f30f46e45e7}{Max\+Trains\+Arrive\+At\+Station}} (string dest)
+\begin{DoxyCompactList}\small\item\em Prints the maximum number of trains that can simultaneously arrive at a given station. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a0bbd6156cb703d5bbfc3d7fc60da2c14}\label{class_menu_a0bbd6156cb703d5bbfc3d7fc60da2c14}} 
+static void {\bfseries maintenance\+Submenu} ()
+\begin{DoxyCompactList}\small\item\em Runs the interactive maintenance submenu. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_menu_a77587f3e3016752ba6c9408517df29c9}{Remove\+Segment}} ()
+\begin{DoxyCompactList}\small\item\em Removes a segment in both ways for maintenance. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_menu_af669ace2fca874055d906cffb14a55d6}{Remove\+Station}} ()
+\begin{DoxyCompactList}\small\item\em Removes a station for maintenance. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_menu_ab7cd8ef8e41b18aa65b89daefb53b4f3}{Reset\+Segments}} ()
+\begin{DoxyCompactList}\small\item\em Finish the maintenance and resets all segments and stations. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_menu_ad949797556e7b00b075aa41b2460fe8d}{top\+K\+\_\+mostaffected}} (int k)
+\begin{DoxyCompactList}\small\item\em Prints the topk most affected stations by the maintenance. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_menu_afec6880da7d2c2db0da19bda67b6a473}{min\+Cost\+Flow}} ()
+\begin{DoxyCompactList}\small\item\em Prints the minimum cost -\/ maxflow between 2 stations. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_menu_ad4c41847cb91530451ada9d8a67e1642}{max\+Flow\+Cost}} ()
+\begin{DoxyCompactList}\small\item\em Prints the cost of the maxflow between 2 stations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a91b11de0a6f2a71b69fa1883d268a416}\label{class_menu_a91b11de0a6f2a71b69fa1883d268a416}} 
+static void {\bfseries cost\+Submenu} ()
+\begin{DoxyCompactList}\small\item\em Runs the interactive Cost Optimization submenu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_menu_ad4c41847cb91530451ada9d8a67e1642}\label{class_menu_ad4c41847cb91530451ada9d8a67e1642}} 
+\index{Menu@{Menu}!maxFlowCost@{maxFlowCost}}
+\index{maxFlowCost@{maxFlowCost}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{maxFlowCost()}{maxFlowCost()}}
+{\footnotesize\ttfamily void Menu\+::max\+Flow\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Prints the cost of the maxflow between 2 stations. 
+
+\begin{DoxyNote}{Note}
+Calls edmonskarp and getcost 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_menu_a5002b7246c9c75a38d2b4f30f46e45e7}\label{class_menu_a5002b7246c9c75a38d2b4f30f46e45e7}} 
+\index{Menu@{Menu}!MaxTrainsArriveAtStation@{MaxTrainsArriveAtStation}}
+\index{MaxTrainsArriveAtStation@{MaxTrainsArriveAtStation}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{MaxTrainsArriveAtStation()}{MaxTrainsArriveAtStation()}}
+{\footnotesize\ttfamily void Menu\+::\+Max\+Trains\+Arrive\+At\+Station (\begin{DoxyParamCaption}\item[{string}]{dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Prints the maximum number of trains that can simultaneously arrive at a given station. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+calls edmonskarp algorithm 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_menu_afec6880da7d2c2db0da19bda67b6a473}\label{class_menu_afec6880da7d2c2db0da19bda67b6a473}} 
+\index{Menu@{Menu}!minCostFlow@{minCostFlow}}
+\index{minCostFlow@{minCostFlow}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{minCostFlow()}{minCostFlow()}}
+{\footnotesize\ttfamily void Menu\+::min\+Cost\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Prints the minimum cost -\/ maxflow between 2 stations. 
+
+\begin{DoxyNote}{Note}
+Calls mincostflow from network 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_menu_a803e24de9b2d50d546e5a0954606f904}\label{class_menu_a803e24de9b2d50d546e5a0954606f904}} 
+\index{Menu@{Menu}!NetworksSimultaneouslyMaxTrains@{NetworksSimultaneouslyMaxTrains}}
+\index{NetworksSimultaneouslyMaxTrains@{NetworksSimultaneouslyMaxTrains}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{NetworksSimultaneouslyMaxTrains()}{NetworksSimultaneouslyMaxTrains()}}
+{\footnotesize\ttfamily void Menu\+::\+Networks\+Simultaneously\+Max\+Trains (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Prints, from all pairs of staions, the ones that require the most amount of trains when taking full advantage of the network capacity. 
+
+\begin{DoxyNote}{Note}
+Calls edmonskarp algorithm 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_menu_a77587f3e3016752ba6c9408517df29c9}\label{class_menu_a77587f3e3016752ba6c9408517df29c9}} 
+\index{Menu@{Menu}!RemoveSegment@{RemoveSegment}}
+\index{RemoveSegment@{RemoveSegment}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{RemoveSegment()}{RemoveSegment()}}
+{\footnotesize\ttfamily void Menu\+::\+Remove\+Segment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Removes a segment in both ways for maintenance. 
+
+\begin{DoxyNote}{Note}
+Calls remove segment from network class 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_menu_af669ace2fca874055d906cffb14a55d6}\label{class_menu_af669ace2fca874055d906cffb14a55d6}} 
+\index{Menu@{Menu}!RemoveStation@{RemoveStation}}
+\index{RemoveStation@{RemoveStation}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{RemoveStation()}{RemoveStation()}}
+{\footnotesize\ttfamily void Menu\+::\+Remove\+Station (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Removes a station for maintenance. 
+
+\begin{DoxyNote}{Note}
+Removing a station is removing all the segment incoming and outgoing from a station making it unreachable 
+
+Calls remove station from network class 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_menu_ab7cd8ef8e41b18aa65b89daefb53b4f3}\label{class_menu_ab7cd8ef8e41b18aa65b89daefb53b4f3}} 
+\index{Menu@{Menu}!ResetSegments@{ResetSegments}}
+\index{ResetSegments@{ResetSegments}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{ResetSegments()}{ResetSegments()}}
+{\footnotesize\ttfamily void Menu\+::\+Reset\+Segments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Finish the maintenance and resets all segments and stations. 
+
+\begin{DoxyNote}{Note}
+Calls reset segments from network class 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_menu_ab9ef3a6657abc99c9975385aa4382221}\label{class_menu_ab9ef3a6657abc99c9975385aa4382221}} 
+\index{Menu@{Menu}!SimultaneouslyMaxTrains@{SimultaneouslyMaxTrains}}
+\index{SimultaneouslyMaxTrains@{SimultaneouslyMaxTrains}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{SimultaneouslyMaxTrains()}{SimultaneouslyMaxTrains()}}
+{\footnotesize\ttfamily void Menu\+::\+Simultaneously\+Max\+Trains (\begin{DoxyParamCaption}\item[{string}]{departurestation\+\_\+,  }\item[{string}]{arrivalstation\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Prints the maximum number of trains that can simultaneously travel between 2 stations. 
+
+\begin{DoxyNote}{Note}
+Calls edmonskarp algorithm 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_menu_ad949797556e7b00b075aa41b2460fe8d}\label{class_menu_ad949797556e7b00b075aa41b2460fe8d}} 
+\index{Menu@{Menu}!topK\_mostaffected@{topK\_mostaffected}}
+\index{topK\_mostaffected@{topK\_mostaffected}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{topK\_mostaffected()}{topK\_mostaffected()}}
+{\footnotesize\ttfamily void Menu\+::top\+K\+\_\+mostaffected (\begin{DoxyParamCaption}\item[{int}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Prints the topk most affected stations by the maintenance. 
+
+\begin{DoxyNote}{Note}
+We consider the most affected the stations with the most difference of Max\+Trains\+Arrive\+At\+Station before -\/ after the maintenance 
+
+After a segment gets removed, we consider that a station can be considered temporarily as a starting station if its get\+Segments().size = 1 on 2.\+4) function 
+
+Calls edmonskarp algortithm 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_menu_a92b31f2e3821ceacb95fb66ac55660b7}\label{class_menu_a92b31f2e3821ceacb95fb66ac55660b7}} 
+\index{Menu@{Menu}!topK\_municipalities\_districts@{topK\_municipalities\_districts}}
+\index{topK\_municipalities\_districts@{topK\_municipalities\_districts}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{topK\_municipalities\_districts()}{topK\_municipalities\_districts()}}
+{\footnotesize\ttfamily void Menu\+::top\+K\+\_\+municipalities\+\_\+districts (\begin{DoxyParamCaption}\item[{int}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Prints the top-\/k municipalities and districts with the most transportation needs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Calls edmonskarp algorithm 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Ines\+O/\+Desktop/\+DA\+\_\+proj1/\+Classes/Menu.\+h\item 
+C\+:/\+Users/\+Ines\+O/\+Desktop/\+DA\+\_\+proj1/\+Classes/Menu.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,63 @@
+\hypertarget{_network_8h_source}{}\doxysection{Network.\+h}
+\label{_network_8h_source}\index{C:/Users/InesO/Desktop/DA\_proj1/Classes/Network.h@{C:/Users/InesO/Desktop/DA\_proj1/Classes/Network.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef DA\_PROJ1\_NETWORK\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define DA\_PROJ1\_NETWORK\_H}}
+\DoxyCodeLine{3 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <unordered\_set>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}Station.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}Segment.h"{}}}
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_network}{Network}} \{}
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_network}{\string~Network}}();}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{21     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_network_aff1aa885c8b7e80ed59d859f135d515f}{addSegment}}(\textcolor{keywordtype}{string} \&sourc, \textcolor{keywordtype}{string} \&dest, \textcolor{keywordtype}{int} w, \textcolor{keywordtype}{string} service);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_network_a05f8c866c17d47a2d984a1137751b897}{edmondsKarp}}(\textcolor{keywordtype}{string} source, \textcolor{keywordtype}{string} target);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_network_ac2b5225333f997e05c3eb1b05c7d2bd5}{MaxTrainsArriveAtStation}}(\textcolor{keywordtype}{string} dest);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_a443daf3acdd1ff91d0ef853c4a47fc7d}{removeSegment}}(\textcolor{keywordtype}{string} stationA, \textcolor{keywordtype}{string} stationB);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_ab678db8a1c551dfb1a8339de2a0bf09e}{removeStation}}(\textcolor{keywordtype}{string} station);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_ab7bba925884d55e8c21e54a9bfd582e1}{resetSegments}}();}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_ab5f0c01e1fc54f9ba51980df447cfe60}{stationsMaxFlow}}();}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{62     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_network_a12836fd5593707ea688f61a41311f584}{getCost}}(\textcolor{keywordtype}{string} stationA, \textcolor{keywordtype}{string} stationB);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{69     pair<int, int> \mbox{\hyperlink{class_network_a2d9bb5a8c2e8f41e1cf4ec73f97d01e9}{minCostFlow}}(\textcolor{keywordtype}{string} src, \textcolor{keywordtype}{string} dest);}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_network_1_1_string_hash}{StringHash}} \{}
+\DoxyCodeLine{72         std::size\_t operator()(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& str)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{73             \textcolor{keywordflow}{return} 37* hash<string>()(str);}
+\DoxyCodeLine{74         \}}
+\DoxyCodeLine{75     \};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_network_1_1_string_equal}{StringEqual}} \{}
+\DoxyCodeLine{78         \textcolor{keywordtype}{bool} operator()(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& str1, \textcolor{keyword}{const} \textcolor{keywordtype}{string}\& str2)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{79             \textcolor{keywordflow}{return} str1 == str2;}
+\DoxyCodeLine{80         \}}
+\DoxyCodeLine{81     \};}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83     std::unordered\_map<string, Station, StringHash, StringEqual> stationMAP;}
+\DoxyCodeLine{84     std::vector<Segment *> removedSegments;}
+\DoxyCodeLine{85     vector<Station> station\_vector;}
+\DoxyCodeLine{86     map<string, int> stations\_maxflow;}
+\DoxyCodeLine{87 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 }
+\DoxyCodeLine{96     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_network_a9ad72c28c217756aa3e6061ef7b5bb37}{AugmentingPath}}(\textcolor{keywordtype}{string} source, \textcolor{keywordtype}{string} target);}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{104     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_network_a7b87d140c85a829dd2cda48ca4a1aca7}{shortestPath}}(\textcolor{keywordtype}{string} src, \textcolor{keywordtype}{string} dest, \textcolor{keywordtype}{int} flow);}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 \};}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_PROJ1\_NETWORK\_H}}
+
+\end{DoxyCode}

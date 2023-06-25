@@ -1,0 +1,297 @@
+\hypertarget{class_network}{}\doxysection{Network Class Reference}
+\label{class_network}\index{Network@{Network}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_network_1_1_string_equal}{String\+Equal}}
+\item 
+struct \mbox{\hyperlink{struct_network_1_1_string_hash}{String\+Hash}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_network_aff1aa885c8b7e80ed59d859f135d515f}{add\+Segment}} (string \&sourc, string \&dest, int w, string service)
+\begin{DoxyCompactList}\small\item\em Add this segment to the source station\textquotesingle{}s adjacent segments vector and to the dest station\textquotesingle{}s incoming segments vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_network_a05f8c866c17d47a2d984a1137751b897}{edmonds\+Karp}} (string source, string target)
+\begin{DoxyCompactList}\small\item\em Calculates the max flow between two stations. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_network_ac2b5225333f997e05c3eb1b05c7d2bd5}{Max\+Trains\+Arrive\+At\+Station}} (string dest)
+\begin{DoxyCompactList}\small\item\em Calculates the max amount of trains that can simultaneously arrive at a given station. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_a443daf3acdd1ff91d0ef853c4a47fc7d}{remove\+Segment}} (string stationA, string stationB)
+\begin{DoxyCompactList}\small\item\em Removes a segment in both directions for periodic maintenance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_ab678db8a1c551dfb1a8339de2a0bf09e}{remove\+Station}} (string station)
+\begin{DoxyCompactList}\small\item\em Removes a station for periodic maintenance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_ab7bba925884d55e8c21e54a9bfd582e1}{reset\+Segments}} ()
+\begin{DoxyCompactList}\small\item\em Finish the maintenance and resets all segments and stations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_ab5f0c01e1fc54f9ba51980df447cfe60}{stations\+Max\+Flow}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the max amount of trains for every station before any maintenance. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_network_a12836fd5593707ea688f61a41311f584}{get\+Cost}} (string stationA, string stationB)
+\begin{DoxyCompactList}\small\item\em Gets the cost of the segments used to calculate the maxflow between 2 stations. \end{DoxyCompactList}\item 
+pair$<$ int, int $>$ \mbox{\hyperlink{class_network_a2d9bb5a8c2e8f41e1cf4ec73f97d01e9}{min\+Cost\+Flow}} (string src, string dest)
+\begin{DoxyCompactList}\small\item\em Gets the most amount of trains at minimum cost between 2 stations (best trains / price ratio) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_network_a9a15c3a5914c1f6778954f7e71d440c5}\label{class_network_a9a15c3a5914c1f6778954f7e71d440c5}} 
+std\+::unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_station}{Station}}, \mbox{\hyperlink{struct_network_1_1_string_hash}{String\+Hash}}, \mbox{\hyperlink{struct_network_1_1_string_equal}{String\+Equal}} $>$ {\bfseries station\+MAP}
+\item 
+\mbox{\Hypertarget{class_network_a6e18bdf675c8ffe90c6fe2d212597d5e}\label{class_network_a6e18bdf675c8ffe90c6fe2d212597d5e}} 
+std\+::vector$<$ \mbox{\hyperlink{class_segment}{Segment}} $\ast$ $>$ {\bfseries removed\+Segments}
+\item 
+\mbox{\Hypertarget{class_network_a69bb862c8109fcc0d02c882e41ea8643}\label{class_network_a69bb862c8109fcc0d02c882e41ea8643}} 
+vector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ {\bfseries station\+\_\+vector}
+\item 
+\mbox{\Hypertarget{class_network_a78eefcd4c4a51421b2cffcc51ca822d5}\label{class_network_a78eefcd4c4a51421b2cffcc51ca822d5}} 
+map$<$ string, int $>$ {\bfseries stations\+\_\+maxflow}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_network_a9ad72c28c217756aa3e6061ef7b5bb37}{Augmenting\+Path}} (string source, string target)
+\begin{DoxyCompactList}\small\item\em Auxiliary function to find the shortest path with bfs. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_network_a7b87d140c85a829dd2cda48ca4a1aca7}{shortest\+Path}} (string src, string dest, int flow)
+\begin{DoxyCompactList}\small\item\em Bellman-\/\+Ford Algorithm for finding shortest path while flagging negative cycles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_network_aff1aa885c8b7e80ed59d859f135d515f}\label{class_network_aff1aa885c8b7e80ed59d859f135d515f}} 
+\index{Network@{Network}!addSegment@{addSegment}}
+\index{addSegment@{addSegment}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{addSegment()}{addSegment()}}
+{\footnotesize\ttfamily bool Network\+::add\+Segment (\begin{DoxyParamCaption}\item[{string \&}]{sourc,  }\item[{string \&}]{dest,  }\item[{int}]{w,  }\item[{string}]{service }\end{DoxyParamCaption})}
+
+
+
+Add this segment to the source station\textquotesingle{}s adjacent segments vector and to the dest station\textquotesingle{}s incoming segments vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sourc} & \\
+\hline
+{\em dest} & \\
+\hline
+{\em w} & \\
+\hline
+{\em service} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Time complexity \+: O(1) 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True if added with success and false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_a9ad72c28c217756aa3e6061ef7b5bb37}\label{class_network_a9ad72c28c217756aa3e6061ef7b5bb37}} 
+\index{Network@{Network}!AugmentingPath@{AugmentingPath}}
+\index{AugmentingPath@{AugmentingPath}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{AugmentingPath()}{AugmentingPath()}}
+{\footnotesize\ttfamily bool Network\+::\+Augmenting\+Path (\begin{DoxyParamCaption}\item[{string}]{source,  }\item[{string}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Auxiliary function to find the shortest path with bfs. 
+
+\begin{DoxyNote}{Note}
+The segments must have residual capacity greater than 0. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em source} & \\
+\hline
+{\em target} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Time Complexity\+: O(\+V $\ast$ E) 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True if a valid path is found, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_a05f8c866c17d47a2d984a1137751b897}\label{class_network_a05f8c866c17d47a2d984a1137751b897}} 
+\index{Network@{Network}!edmondsKarp@{edmondsKarp}}
+\index{edmondsKarp@{edmondsKarp}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{edmondsKarp()}{edmondsKarp()}}
+{\footnotesize\ttfamily int Network\+::edmonds\+Karp (\begin{DoxyParamCaption}\item[{string}]{source,  }\item[{string}]{target }\end{DoxyParamCaption})}
+
+
+
+Calculates the max flow between two stations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & \\
+\hline
+{\em target} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Time complexity \+: O(\+VE$^\wedge$2) 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+max flow 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_a12836fd5593707ea688f61a41311f584}\label{class_network_a12836fd5593707ea688f61a41311f584}} 
+\index{Network@{Network}!getCost@{getCost}}
+\index{getCost@{getCost}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Network\+::get\+Cost (\begin{DoxyParamCaption}\item[{string}]{stationA,  }\item[{string}]{stationB }\end{DoxyParamCaption})}
+
+
+
+Gets the cost of the segments used to calculate the maxflow between 2 stations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stationA} & \\
+\hline
+{\em stationB} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Time Complexity \+: O(\+V $\ast$ E) 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The cost of the segments used to calculate the maxflow between 2 stations 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_ac2b5225333f997e05c3eb1b05c7d2bd5}\label{class_network_ac2b5225333f997e05c3eb1b05c7d2bd5}} 
+\index{Network@{Network}!MaxTrainsArriveAtStation@{MaxTrainsArriveAtStation}}
+\index{MaxTrainsArriveAtStation@{MaxTrainsArriveAtStation}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{MaxTrainsArriveAtStation()}{MaxTrainsArriveAtStation()}}
+{\footnotesize\ttfamily int Network\+::\+Max\+Trains\+Arrive\+At\+Station (\begin{DoxyParamCaption}\item[{string}]{dest }\end{DoxyParamCaption})}
+
+
+
+Calculates the max amount of trains that can simultaneously arrive at a given station. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Time complexity \+: O(\+VE$^\wedge$2) 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+max amount of trains that can simultaneously arrive at a given station 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_a2d9bb5a8c2e8f41e1cf4ec73f97d01e9}\label{class_network_a2d9bb5a8c2e8f41e1cf4ec73f97d01e9}} 
+\index{Network@{Network}!minCostFlow@{minCostFlow}}
+\index{minCostFlow@{minCostFlow}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{minCostFlow()}{minCostFlow()}}
+{\footnotesize\ttfamily pair$<$ int, int $>$ Network\+::min\+Cost\+Flow (\begin{DoxyParamCaption}\item[{string}]{src,  }\item[{string}]{dest }\end{DoxyParamCaption})}
+
+
+
+Gets the most amount of trains at minimum cost between 2 stations (best trains / price ratio) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & \\
+\hline
+{\em dest} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Time Complexity \+: O(\+V $^\wedge$2 $\ast$ E $\ast$ log(\+V$\ast$\+C)) where C is the value of the largest arc cost in the graph 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+A pair with the flow(amount of trains) and the cost 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_a443daf3acdd1ff91d0ef853c4a47fc7d}\label{class_network_a443daf3acdd1ff91d0ef853c4a47fc7d}} 
+\index{Network@{Network}!removeSegment@{removeSegment}}
+\index{removeSegment@{removeSegment}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{removeSegment()}{removeSegment()}}
+{\footnotesize\ttfamily void Network\+::remove\+Segment (\begin{DoxyParamCaption}\item[{string}]{stationA,  }\item[{string}]{stationB }\end{DoxyParamCaption})}
+
+
+
+Removes a segment in both directions for periodic maintenance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stationA} & \\
+\hline
+{\em stationB} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Time Complexity \+: O(\+E) 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_network_ab678db8a1c551dfb1a8339de2a0bf09e}\label{class_network_ab678db8a1c551dfb1a8339de2a0bf09e}} 
+\index{Network@{Network}!removeStation@{removeStation}}
+\index{removeStation@{removeStation}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{removeStation()}{removeStation()}}
+{\footnotesize\ttfamily void Network\+::remove\+Station (\begin{DoxyParamCaption}\item[{string}]{station }\end{DoxyParamCaption})}
+
+
+
+Removes a station for periodic maintenance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em station} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Time Complexity \+: O(\+E) 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_network_ab7bba925884d55e8c21e54a9bfd582e1}\label{class_network_ab7bba925884d55e8c21e54a9bfd582e1}} 
+\index{Network@{Network}!resetSegments@{resetSegments}}
+\index{resetSegments@{resetSegments}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{resetSegments()}{resetSegments()}}
+{\footnotesize\ttfamily void Network\+::reset\+Segments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Finish the maintenance and resets all segments and stations. 
+
+\begin{DoxyNote}{Note}
+Time Complexity \+: O(\+E) 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_network_a7b87d140c85a829dd2cda48ca4a1aca7}\label{class_network_a7b87d140c85a829dd2cda48ca4a1aca7}} 
+\index{Network@{Network}!shortestPath@{shortestPath}}
+\index{shortestPath@{shortestPath}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{shortestPath()}{shortestPath()}}
+{\footnotesize\ttfamily bool Network\+::shortest\+Path (\begin{DoxyParamCaption}\item[{string}]{src,  }\item[{string}]{dest,  }\item[{int}]{flow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Bellman-\/\+Ford Algorithm for finding shortest path while flagging negative cycles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & \\
+\hline
+{\em dest} & \\
+\hline
+{\em flow} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Time Complexity \+: O(\+V$\ast$\+E) 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True if there are no negative cycles 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_ab5f0c01e1fc54f9ba51980df447cfe60}\label{class_network_ab5f0c01e1fc54f9ba51980df447cfe60}} 
+\index{Network@{Network}!stationsMaxFlow@{stationsMaxFlow}}
+\index{stationsMaxFlow@{stationsMaxFlow}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{stationsMaxFlow()}{stationsMaxFlow()}}
+{\footnotesize\ttfamily void Network\+::stations\+Max\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the max amount of trains for every station before any maintenance. 
+
+\begin{DoxyNote}{Note}
+Helper function for topic 4.\+2 
+
+Store each station and the max amount of trains in a map 
+
+Time Complexity \+: O(\+V $\ast$ VE$^\wedge$2) 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Ines\+O/\+Desktop/\+DA\+\_\+proj1/\+Classes/Network.\+h\item 
+C\+:/\+Users/\+Ines\+O/\+Desktop/\+DA\+\_\+proj1/\+Classes/Network.\+cpp\end{DoxyCompactItemize}

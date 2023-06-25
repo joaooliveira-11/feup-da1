@@ -1,0 +1,327 @@
+\hypertarget{class_station}{}\doxysection{Station Class Reference}
+\label{class_station}\index{Station@{Station}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_station_a2e1ac55d456b475842d00bb41cb93bbc}{Station}} (string \+\_\+name, string \+\_\+district, string \+\_\+municipality, string \+\_\+township, string \+\_\+line)
+\begin{DoxyCompactList}\small\item\em Constructor of new \mbox{\hyperlink{class_station}{Station}} given it´s station name, district, municipality, township and line. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_station_ac823ae175ec0e2baff462ed9612c7bae}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the Station´s name. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_station_adfeb6e1c7361d9de1a8efade27b82c7c}{get\+District}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the Station´s district. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_station_a352841c01b6cdb25e84cae3b7b2f6418}{get\+Municipality}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the Station´s municipality. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_station_a1e3c26415e7886648ea5e1a9dfddcdde}{get\+Township}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the Station´s township. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_station_a29859ce5b681749459b415b3bf86ae81}{get\+Line}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the Station´s line. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_station_a1013eb88846a6eb4886b3cc6b82a7c8c}{operator==}} (const \mbox{\hyperlink{class_station}{Station}} \&\+\_\+other\+Station) const
+\begin{DoxyCompactList}\small\item\em Operator= overload. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_station_a17bb35a315d323921b0841dd949f73e4}{set\+Visited}} (bool visited)
+\begin{DoxyCompactList}\small\item\em Setter for the Station´s visited attribute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_station_ae76dd3e4020ebbb5b5d1e9b8e6ae0331}{set\+Path}} (\mbox{\hyperlink{class_segment}{Segment}} $\ast$path)
+\begin{DoxyCompactList}\small\item\em Setter for the Station´s path attribute. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_station_a362774608db0f91296f19c987ea50e6e}{is\+Visited}} ()
+\item 
+vector$<$ \mbox{\hyperlink{class_segment}{Segment}} $\ast$ $>$ \mbox{\hyperlink{class_station_a843681164c3f1e829687df726b2c8197}{get\+Segments}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the Station´s adjacent segments. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_segment}{Segment}} $\ast$ $>$ \mbox{\hyperlink{class_station_a298875c8ef8b95c88e166b3e0d1184e0}{get\+Incoming}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the Station´s incoming segments. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_segment}{Segment}} $\ast$ \mbox{\hyperlink{class_station_a44bb41127dfd4748684b198a6ef59d66}{get\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the Station´s path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_station_a67ce274a6b8800b33ccbda34fc67d342}{add\+Incoming}} (\mbox{\hyperlink{class_segment}{Segment}} $\ast$segment)
+\begin{DoxyCompactList}\small\item\em Add a segment to the station\textquotesingle{}s incoming segments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_station_a2eb7c475d208605b43517691d69d19fc}{add\+Segment}} (\mbox{\hyperlink{class_segment}{Segment}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Add a segment to the station\textquotesingle{}s adjacent segments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_station_a308549bac321be015b825e0252f0c916}{set\+Segments}} (vector$<$ \mbox{\hyperlink{class_segment}{Segment}} $\ast$ $>$ new\+Segments)
+\begin{DoxyCompactList}\small\item\em Setter for the Station´s adjacent segments vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_station_a73ac81d8516faf23de558491afd01e7b}{set\+Incoming}} (vector$<$ \mbox{\hyperlink{class_segment}{Segment}} $\ast$ $>$ new\+Incoming)
+\begin{DoxyCompactList}\small\item\em Setter for the Station´s incoming segments vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_station_a72fb72db335bf2be3533463f65d4ac2a}{get\+Dist}} ()
+\begin{DoxyCompactList}\small\item\em Gets the cost to get to a station from a single source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_station_af782f2a008cda99da038364818776696}{set\+Dist}} (int distance)
+\begin{DoxyCompactList}\small\item\em Sets the cost to get to a station from a single source. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_station_a2e1ac55d456b475842d00bb41cb93bbc}\label{class_station_a2e1ac55d456b475842d00bb41cb93bbc}} 
+\index{Station@{Station}!Station@{Station}}
+\index{Station@{Station}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{Station()}{Station()}}
+{\footnotesize\ttfamily Station\+::\+Station (\begin{DoxyParamCaption}\item[{string}]{\+\_\+name,  }\item[{string}]{\+\_\+district,  }\item[{string}]{\+\_\+municipality,  }\item[{string}]{\+\_\+township,  }\item[{string}]{\+\_\+line }\end{DoxyParamCaption})}
+
+
+
+Constructor of new \mbox{\hyperlink{class_station}{Station}} given it´s station name, district, municipality, township and line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & \\
+\hline
+{\em \+\_\+district} & \\
+\hline
+{\em \+\_\+municipality} & \\
+\hline
+{\em \+\_\+township} & \\
+\hline
+{\em \+\_\+line} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_station_a67ce274a6b8800b33ccbda34fc67d342}\label{class_station_a67ce274a6b8800b33ccbda34fc67d342}} 
+\index{Station@{Station}!addIncoming@{addIncoming}}
+\index{addIncoming@{addIncoming}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{addIncoming()}{addIncoming()}}
+{\footnotesize\ttfamily void Station\+::add\+Incoming (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_segment}{Segment}} $\ast$}]{segment }\end{DoxyParamCaption})}
+
+
+
+Add a segment to the station\textquotesingle{}s incoming segments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em segment} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_station_a2eb7c475d208605b43517691d69d19fc}\label{class_station_a2eb7c475d208605b43517691d69d19fc}} 
+\index{Station@{Station}!addSegment@{addSegment}}
+\index{addSegment@{addSegment}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{addSegment()}{addSegment()}}
+{\footnotesize\ttfamily void Station\+::add\+Segment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_segment}{Segment}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Add a segment to the station\textquotesingle{}s adjacent segments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_station_a72fb72db335bf2be3533463f65d4ac2a}\label{class_station_a72fb72db335bf2be3533463f65d4ac2a}} 
+\index{Station@{Station}!getDist@{getDist}}
+\index{getDist@{getDist}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{getDist()}{getDist()}}
+{\footnotesize\ttfamily int Station\+::get\+Dist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the cost to get to a station from a single source. 
+
+\begin{DoxyReturn}{Returns}
+cost to get to a station from a single source 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station_adfeb6e1c7361d9de1a8efade27b82c7c}\label{class_station_adfeb6e1c7361d9de1a8efade27b82c7c}} 
+\index{Station@{Station}!getDistrict@{getDistrict}}
+\index{getDistrict@{getDistrict}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{getDistrict()}{getDistrict()}}
+{\footnotesize\ttfamily string Station\+::get\+District (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the Station´s district. 
+
+\begin{DoxyReturn}{Returns}
+A Station´s district. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station_a298875c8ef8b95c88e166b3e0d1184e0}\label{class_station_a298875c8ef8b95c88e166b3e0d1184e0}} 
+\index{Station@{Station}!getIncoming@{getIncoming}}
+\index{getIncoming@{getIncoming}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{getIncoming()}{getIncoming()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_segment}{Segment}} $\ast$ $>$ Station\+::get\+Incoming (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for the Station´s incoming segments. 
+
+\begin{DoxyReturn}{Returns}
+A vector with all incoming segments. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station_a29859ce5b681749459b415b3bf86ae81}\label{class_station_a29859ce5b681749459b415b3bf86ae81}} 
+\index{Station@{Station}!getLine@{getLine}}
+\index{getLine@{getLine}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{getLine()}{getLine()}}
+{\footnotesize\ttfamily string Station\+::get\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the Station´s line. 
+
+\begin{DoxyReturn}{Returns}
+A Station´s line. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station_a352841c01b6cdb25e84cae3b7b2f6418}\label{class_station_a352841c01b6cdb25e84cae3b7b2f6418}} 
+\index{Station@{Station}!getMunicipality@{getMunicipality}}
+\index{getMunicipality@{getMunicipality}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{getMunicipality()}{getMunicipality()}}
+{\footnotesize\ttfamily string Station\+::get\+Municipality (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the Station´s municipality. 
+
+\begin{DoxyReturn}{Returns}
+A Station´s municipality. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station_ac823ae175ec0e2baff462ed9612c7bae}\label{class_station_ac823ae175ec0e2baff462ed9612c7bae}} 
+\index{Station@{Station}!getName@{getName}}
+\index{getName@{getName}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Station\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the Station´s name. 
+
+\begin{DoxyReturn}{Returns}
+A Station´s name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station_a44bb41127dfd4748684b198a6ef59d66}\label{class_station_a44bb41127dfd4748684b198a6ef59d66}} 
+\index{Station@{Station}!getPath@{getPath}}
+\index{getPath@{getPath}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{getPath()}{getPath()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_segment}{Segment}} $\ast$ Station\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for the Station´s path. 
+
+\begin{DoxyReturn}{Returns}
+A Station´s path. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station_a843681164c3f1e829687df726b2c8197}\label{class_station_a843681164c3f1e829687df726b2c8197}} 
+\index{Station@{Station}!getSegments@{getSegments}}
+\index{getSegments@{getSegments}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{getSegments()}{getSegments()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_segment}{Segment}} $\ast$ $>$ Station\+::get\+Segments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for the Station´s adjacent segments. 
+
+\begin{DoxyReturn}{Returns}
+A vector with all adjacent segments. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station_a1e3c26415e7886648ea5e1a9dfddcdde}\label{class_station_a1e3c26415e7886648ea5e1a9dfddcdde}} 
+\index{Station@{Station}!getTownship@{getTownship}}
+\index{getTownship@{getTownship}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{getTownship()}{getTownship()}}
+{\footnotesize\ttfamily string Station\+::get\+Township (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the Station´s township. 
+
+\begin{DoxyReturn}{Returns}
+A Station´s township. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station_a362774608db0f91296f19c987ea50e6e}\label{class_station_a362774608db0f91296f19c987ea50e6e}} 
+\index{Station@{Station}!isVisited@{isVisited}}
+\index{isVisited@{isVisited}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{isVisited()}{isVisited()}}
+{\footnotesize\ttfamily bool Station\+::is\+Visited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+True if the station is visited, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station_a1013eb88846a6eb4886b3cc6b82a7c8c}\label{class_station_a1013eb88846a6eb4886b3cc6b82a7c8c}} 
+\index{Station@{Station}!operator==@{operator==}}
+\index{operator==@{operator==}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Station\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_station}{Station}} \&}]{\+\_\+other\+Station }\end{DoxyParamCaption}) const}
+
+
+
+Operator= overload. 
+
+\begin{DoxyReturn}{Returns}
+True if our Station´s name is equal to the \mbox{\hyperlink{class_station}{Station}} received as parameter. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+other\+Station} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_station_af782f2a008cda99da038364818776696}\label{class_station_af782f2a008cda99da038364818776696}} 
+\index{Station@{Station}!setDist@{setDist}}
+\index{setDist@{setDist}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{setDist()}{setDist()}}
+{\footnotesize\ttfamily void Station\+::set\+Dist (\begin{DoxyParamCaption}\item[{int}]{distance }\end{DoxyParamCaption})}
+
+
+
+Sets the cost to get to a station from a single source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em distance} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_station_a73ac81d8516faf23de558491afd01e7b}\label{class_station_a73ac81d8516faf23de558491afd01e7b}} 
+\index{Station@{Station}!setIncoming@{setIncoming}}
+\index{setIncoming@{setIncoming}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{setIncoming()}{setIncoming()}}
+{\footnotesize\ttfamily void Station\+::set\+Incoming (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_segment}{Segment}} $\ast$ $>$}]{new\+Incoming }\end{DoxyParamCaption})}
+
+
+
+Setter for the Station´s incoming segments vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Incoming} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_station_ae76dd3e4020ebbb5b5d1e9b8e6ae0331}\label{class_station_ae76dd3e4020ebbb5b5d1e9b8e6ae0331}} 
+\index{Station@{Station}!setPath@{setPath}}
+\index{setPath@{setPath}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{setPath()}{setPath()}}
+{\footnotesize\ttfamily void Station\+::set\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_segment}{Segment}} $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Setter for the Station´s path attribute. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_station_a308549bac321be015b825e0252f0c916}\label{class_station_a308549bac321be015b825e0252f0c916}} 
+\index{Station@{Station}!setSegments@{setSegments}}
+\index{setSegments@{setSegments}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{setSegments()}{setSegments()}}
+{\footnotesize\ttfamily void Station\+::set\+Segments (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_segment}{Segment}} $\ast$ $>$}]{new\+Segments }\end{DoxyParamCaption})}
+
+
+
+Setter for the Station´s adjacent segments vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Segments} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_station_a17bb35a315d323921b0841dd949f73e4}\label{class_station_a17bb35a315d323921b0841dd949f73e4}} 
+\index{Station@{Station}!setVisited@{setVisited}}
+\index{setVisited@{setVisited}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{setVisited()}{setVisited()}}
+{\footnotesize\ttfamily void Station\+::set\+Visited (\begin{DoxyParamCaption}\item[{bool}]{visited }\end{DoxyParamCaption})}
+
+
+
+Setter for the Station´s visited attribute. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visited} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Ines\+O/\+Desktop/\+DA\+\_\+proj1/\+Classes/Station.\+h\item 
+C\+:/\+Users/\+Ines\+O/\+Desktop/\+DA\+\_\+proj1/\+Classes/Station.\+cpp\end{DoxyCompactItemize}
